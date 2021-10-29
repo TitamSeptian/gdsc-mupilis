@@ -21,9 +21,9 @@ function searchMovie() {
         },
         success: function (result) {
                 let movies = result.results;
-                
+            if (result.total_results !== 0) {
                 $.each(movies, function (i, data) {
-                // console.log(data);
+                    // console.log(data);
                     $('#movie-list').append(`
                         <div class="col-md-4">
                             <div class="card mb-3">
@@ -40,7 +40,13 @@ function searchMovie() {
                 });
 
                 $('#search-input').val('');
-
+            } else {
+                $('#movie-list').html(`
+                    <div class="col">
+                        <h3 class="text-center">Sayang banget yang di cari gada, coba cari yang lain</h3>
+                    </div>
+                `)
+            }
                 
         },
         error: (xhr) => {
