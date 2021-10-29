@@ -9,3 +9,11 @@ Repositori ini berisi source code dari tugas gdsc pada #Wrokshop 3
 4. movie detail
 5. halaman detail movie
 6. filter berdasarkan nama movie.
+
+## Show Case
+index : 
+![alt text](./showcase/index.png)
+details : 
+![alt text](./showcase/detail.png)
+search : 
+![alt text](./showcase/search.png)
